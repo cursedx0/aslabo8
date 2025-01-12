@@ -8,6 +8,9 @@ on:
 jobs:
   primero:
     runs-on: ubuntu-latest
+    permissions: #requeridos para pruebas de código, linters etc
+      contents: write
+      security-events: write
     steps:
       - name: checkout code
         uses: actions/checkout@v4
