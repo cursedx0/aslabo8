@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: front-web-lb
+  labels:
+    app: front-web
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80 #puerto al exterior
+    targetPort: 5000 #puerto del pod
+  selector:
+    app: front-web
