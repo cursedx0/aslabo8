@@ -15,6 +15,6 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
       - name: correr python lint
-        uses: advanced-security/python-lint-code-scanning-action@v1
+        uses: advanced-security/python-lint-code-scanning-action@v3
         with:
           linter: pylint
