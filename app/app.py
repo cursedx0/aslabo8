@@ -1,4 +1,4 @@
-import time #app.py file
+import time #feature1
 import redis
 from flask import Flask
 app = Flask(__name__)
