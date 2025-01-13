@@ -11,6 +11,11 @@ jobs:
     permissions: #requeridos para pruebas de código, linters etc
       security-events: write
     steps:
-      - uses: advanced-security/python-lint-code-scanning-action@v1
+      -
+        name: bajar codigo
+        uses: actions/checkout@v4
+      -
+        name: correccion
+        uses: advanced-security/python-lint-code-scanning-action@v1
         with:
           linter: pylint
