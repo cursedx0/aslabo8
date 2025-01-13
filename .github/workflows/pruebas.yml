@@ -12,7 +12,7 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
         with:
-          token: ${{ GHTOKEN }}
+          token: ${{ secrets.GHTOKEN }}
       - name: correr python lint
         uses: advanced-security/python-lint-code-scanning-action@v1
         with:
