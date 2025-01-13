@@ -11,13 +11,11 @@ jobs:
     permissions: #requeridos para pruebas de código, linters etc
       security-events: write
     steps:
-      -
-        name: bajar codigo
+      - name: bajar codigo
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GHTOKEN }}
-      -
-        name: correccion
+      - name: correccion
         uses: advanced-security/python-lint-code-scanning-action@v1
         with:
           linter: pylint
