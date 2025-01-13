@@ -4,17 +4,15 @@ on:
   push:
     branches-ignore:
       - main
+    branches:
+      - "*"
 
 jobs:
   primero:
     runs-on: ubuntu-latest
     permissions: #requeridos para pruebas de código, linters etc
-      contents: write
       security-events: write
     steps:
-      - name: checkout code
-        uses: actions/checkout@v4
-      - name: correr python lint
-        uses: advanced-security/python-lint-code-scanning-action@v3
+      - uses: advanced-security/python-lint-code-scanning-action@v1
         with:
           linter: pylint
